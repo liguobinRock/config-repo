@@ -10,6 +10,11 @@ spring:
          &allowMultiQueries=true\
          &useSSL=false\
          &autoReconnect=true"
+  rabbitmq:
+    host: 192.168.43.30
+    username: liguobin
+    password: 123456
+    port: 5672
 
 server:
   port: 8091
