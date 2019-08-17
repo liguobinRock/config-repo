@@ -1,1 +1,25 @@
 
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: "jdbc:mysql://localhost:3306/SpringCloud_Sell?\
+         useUnicode=true\
+         &characterEncoding=UTF-8\
+         &autoReconnect=true\
+         &allowMultiQueries=true\
+         &useSSL=false\
+         &autoReconnect=true"
+  rabbitmq:
+    host: 192.168.43.30
+    username: liguobin
+    password: 123456
+    port: 5672
+
+server:
+  port: 8091
+
+env:
+ test1
+
