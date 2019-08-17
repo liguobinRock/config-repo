@@ -17,25 +17,6 @@ spring:
     password: 123456
     port: 5672
     
-  redis:
-    database: 0
-    timeout: 10000
-    pool:
-      max-idle: 300 #空闲连接实例的最大数目，为负值时没有限制
-      min-idle: 50 #空闲连接实例的最小数目，为负值时没有限制
-      max-active: 1000 #可用连接实例的最大数目，为负值时没有限制
-    cluster:
-      nodes:
-       - 192.168.43.30:8001
-       - 192.168.43.30:8002
-       - 192.168.43.30:8003
-       - 192.168.43.30:8004
-       - 192.168.43.30:8005
-       - 192.168.43.30:8006
-      connTimeOut: 1000 #连接server超时时间
-      soTimeOut: 1000 #等待response超时时间
-      maxAttempts: 2  #连接失败重试次数
-
 server:
   port: 8091
 
