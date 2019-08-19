@@ -10,6 +10,7 @@ zuul:
     liguobinProduct:
       path: /liguobinProduct/**
       serviceId: product
+      #设置传递Cookie
       sensitiveHeaders:
     #简洁写法
     #product: /liguobinProduct/**
