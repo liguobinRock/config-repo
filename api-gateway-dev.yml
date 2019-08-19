@@ -5,10 +5,6 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
-
-ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
   routes:
     #/liguobinProduct/product/list -> /product/product/list
     #liguobinProduct:
@@ -19,7 +15,11 @@ ribbon:
   #正则配置禁止访问的地址 排除某些路由
   ignored-patterns:
     - /**/product/listForOrder
-    
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  
 logging:
   level:
     root: info
