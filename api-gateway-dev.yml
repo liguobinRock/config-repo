@@ -9,6 +9,18 @@ zuul:
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
+
+zuul:
+  routes:
+    #/liguobinProduct/product/list -> /product/product/list
+    #liguobinProduct:
+      #path: /liguobinProduct/**
+      #serviceId: product
+    #简洁写法
+    product: /liguobinProduct/**
+  #正则配置禁止访问的地址 排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrder
  
 logging:
   level:
