@@ -1,0 +1,42 @@
+server:
+  port: 8094
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: "jdbc:mysql://localhost:3306/SpringCloud_Sell?\
+         useUnicode=true\
+         &characterEncoding=UTF-8\
+         &autoReconnect=true\
+         &allowMultiQueries=true\
+         &useSSL=false\
+         &autoReconnect=true"
+
+  redis:
+    database: 0
+    timeout: 10000
+    pool:
+      max-idle: 300 #空闲连接实例的最大数目，为负值时没有限制
+      min-idle: 50 #空闲连接实例的最小数目，为负值时没有限制
+      max-active: 1000 #可用连接实例的最大数目，为负值时没有限制
+    cluster: #redis 集群
+      nodes:
+       - 192.168.43.30:8001
+       - 192.168.43.30:8002
+       - 192.168.43.30:8003
+       - 192.168.43.30:8004
+       - 192.168.43.30:8005
+       - 192.168.43.30:8006
+      connTimeOut: 1000 #连接server超时时间
+      soTimeOut: 1000 #等待response超时时间
+      maxAttempts: 2  #连接失败重试次数
+ 
+logging:
+  level:
+    root: info
+  file: /Users/mac/Desktop/Java/log/SpringCloud_Sell/user.log
+  pattern:
+    file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx'
+
