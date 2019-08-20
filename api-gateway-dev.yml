@@ -15,8 +15,16 @@ zuul:
     #简洁写法
     #product: /liguobinProduct/**
   #正则配置禁止访问的地址 排除某些路由
-  ignored-patterns:
-    - /**/product/listForOrder
+      ignored-patterns:
+       - /**/product/listForOrder
+  #/liguobinOrder/order/create -> /product/order/create
+    liguobinOrder:
+      path: /liguobinOrder/**
+      serviceId: order
+      #设置传递Cookie
+      sensitiveHeaders:
+    #简洁写法
+    #order: /liguobinOrder/**
 
 ribbon:
   ReadTimeout: 10000
