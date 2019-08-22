@@ -2,6 +2,7 @@ server:
   port: 8093
   
 zuul:
+  sensitive-headers:  #全局设置敏感头方便传递Cookie
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
@@ -10,8 +11,6 @@ zuul:
     liguobinProduct:
       path: /liguobinProduct/**
       serviceId: product
-      #设置传递Cookie
-      sensitiveHeaders:
     #简洁写法
     #product: /liguobinProduct/**
   #正则配置禁止访问的地址 排除某些路由
