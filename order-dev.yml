@@ -52,7 +52,7 @@ server:
   port: 8091
 
 env:
- dev13
+ dev
  
 logging:
   level:

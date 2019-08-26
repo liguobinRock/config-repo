@@ -34,7 +34,7 @@ server:
   port: 8092
 
 env:
- dev1
+ dev
  
 logging:
   level:
