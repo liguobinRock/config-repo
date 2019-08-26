@@ -1,6 +1,12 @@
 server:
   port: 8095
 
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
 env:
  dev
  
